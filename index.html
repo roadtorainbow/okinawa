@@ -485,4 +485,53 @@
 
       try {
         localStorage.setItem('activeOkinawaTab', tabId);
-      } catch (
+      } catch (e) {
+        console.warn('localStorage 寫入受限:', e);
+      }
+    }
+
+    // 頁面載入備援機制 (Fallback)
+    window.addEventListener('DOMContentLoaded', () => {
+      let savedTab = 'hotel';
+      try {
+        savedTab = localStorage.getItem('activeOkinawaTab') || 'hotel';
+      } catch (e) {
+        console.warn('localStorage 讀取受限:', e);
+      }
+      
+      if (!document.getElementById(savedTab)) savedTab = 'hotel';
+      openTab(savedTab);
+    });
+
+    // 圖片載入失敗時自動嘗試其他常見副檔名 (PNG/JPEG) 或隱藏
+    function tryLoadOtherExt(img, basePath) {
+      if (!img.dataset.tried) {
+        img.dataset.tried = "png";
+        img.src = basePath + ".png";
+      } else if (img.dataset.tried === "png") {
+        img.dataset.tried = "jpeg";
+        img.src = basePath + ".jpeg";
+      } else if (img.dataset.tried === "jpeg") {
+        img.dataset.tried = "none";
+        img.src = basePath; // 嘗試無副檔名
+      } else {
+        // 若無圖片則隱藏圖框，不留破圖
+        img.parentElement.style.display = 'none';
+      }
+    }
+
+    // Lightbox 全螢幕放大
+    function showModal(src) {
+      if (!src) return;
+      const modal = document.getElementById('imageModal');
+      document.getElementById('modalImg').src = src;
+      modal.style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
