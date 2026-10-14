@@ -23,7 +23,7 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
-      font-size: 1.15em; /* 內文與表格字體 1.1em ~ 1.2em */
+      font-size: 1.15em;
       line-height: 1.6;
       padding-bottom: 40px;
     }
@@ -37,11 +37,10 @@
     }
 
     h1 {
-      font-size: 1.7rem; /* 標題 1.5rem ~ 2rem */
+      font-size: 1.7rem;
       font-weight: bold;
     }
 
-    /* 導覽頁籤橫向滑動排版 */
     .nav-tabs {
       display: flex;
       overflow-x: auto;
@@ -124,7 +123,6 @@
       color: #0369a1;
     }
 
-    /* 大圖排版：寬度 100%，高度 300px~400px，object-fit: cover */
     .img-box {
       width: 100%;
       height: 350px;
@@ -142,7 +140,6 @@
       cursor: pointer;
     }
 
-    /* Modal Lightbox (全螢幕大圖放大檢視) */
     .modal {
       display: none;
       position: fixed;
@@ -177,7 +174,6 @@
     <h1>沖繩 7天6夜行程簡表</h1>
   </header>
 
-  <!-- 導覽分頁頁籤 -->
   <nav class="nav-tabs">
     <button class="tab-button" onclick="openTab('hotel')">飯店資訊</button>
     <button class="tab-button" onclick="openTab('flight')">航班資訊</button>
@@ -202,7 +198,7 @@
           <tr><td class="time-col">房間面積</td><td>15平方公尺，兩張單人床，單床尺寸110×200cm</td></tr>
         </table>
         <div class="img-box">
-          <img src="image/hotel1.jpg" alt="hotel1" onclick="showModal(this.src)" onerror="smartImageFallback(this, 'hotel1')">
+          <img src="images/hotel1.jpg" alt="hotel1" onclick="showModal(this.src)" onerror="smartImageFallback(this, 'hotel1')">
         </div>
       </div>
 
@@ -213,7 +209,7 @@
           <tr><td class="time-col">房間面積</td><td>20平方公尺，兩張單人床，單床尺寸120×200cm</td></tr>
         </table>
         <div class="img-box">
-          <img src="image/hotel2.jpg" alt="hotel2" onclick="showModal(this.src)" onerror="smartImageFallback(this, 'hotel2')">
+          <img src="images/hotel2.jpg" alt="hotel2" onclick="showModal(this.src)" onerror="smartImageFallback(this, 'hotel2')">
         </div>
       </div>
     </div>
@@ -241,7 +237,7 @@
           <tr><td class="time-col">20:30</td><td>電車至旭橋站，東橫INN入住</td></tr>
         </table>
         <div class="img-box">
-          <img src="image/day1.jpg" alt="day1" onclick="showModal(this.src)" onerror="smartImageFallback(this, 'day1')">
+          <img src="images/day1.jpg" alt="day1" onclick="showModal(this.src)" onerror="smartImageFallback(this, 'day1')">
         </div>
       </div>
     </div>
@@ -259,7 +255,7 @@
           <tr><td class="time-col">18：45</td><td>回到縣廳前</td></tr>
         </table>
         <div class="img-box">
-          <img src="image/day2.jpg" alt="day2" onclick="showModal(this.src)" onerror="smartImageFallback(this, 'day2')">
+          <img src="images/day2.jpg" alt="day2" onclick="showModal(this.src)" onerror="smartImageFallback(this, 'day2')">
         </div>
       </div>
     </div>
@@ -279,7 +275,7 @@
           <tr><td class="time-col">17:25-17：50</td><td>抵達縣廳前觀光巴士乘降所</td></tr>
         </table>
         <div class="img-box">
-          <img src="image/day3.jpg" alt="day3" onclick="showModal(this.src)" onerror="smartImageFallback(this, 'day3')">
+          <img src="images/day3.jpg" alt="day3" onclick="showModal(this.src)" onerror="smartImageFallback(this, 'day3')">
         </div>
       </div>
     </div>
@@ -294,7 +290,7 @@
           <tr><td class="time-col">20：30-22：00</td><td>Churasun 6現代熱舞秀<br>(帶護照，20：00開放入場，20：20前必須入場，不然票會被賣掉)</td></tr>
         </table>
         <div class="img-box">
-          <img src="image/day4.jpg" alt="day4" onclick="showModal(this.src)" onerror="smartImageFallback(this, 'day4')">
+          <img src="images/day4.jpg" alt="day4" onclick="showModal(this.src)" onerror="smartImageFallback(this, 'day4')">
         </div>
       </div>
     </div>
@@ -314,7 +310,7 @@
           <tr><td class="time-col">21:30</td><td>回縣廳前解散</td></tr>
         </table>
         <div class="img-box">
-          <img src="image/day5.jpg" alt="day5" onclick="showModal(this.src)" onerror="smartImageFallback(this, 'day5')">
+          <img src="images/day5.jpg" alt="day5" onclick="showModal(this.src)" onerror="smartImageFallback(this, 'day5')">
         </div>
       </div>
     </div>
@@ -330,7 +326,7 @@
           <tr><td class="time-col">18：30</td><td>沖繩民謠居酒屋用晚餐</td></tr>
         </table>
         <div class="img-box">
-          <img src="image/day6.jpg" alt="day6" onclick="showModal(this.src)" onerror="smartImageFallback(this, 'day6')">
+          <img src="images/day6.jpg" alt="day6" onclick="showModal(this.src)" onerror="smartImageFallback(this, 'day6')">
         </div>
       </div>
     </div>
@@ -346,7 +342,7 @@
           <tr><td class="time-col">15:43-18:01</td><td>台北-花蓮(普悠瑪236)台北-花蓮</td></tr>
         </table>
         <div class="img-box">
-          <img src="image/day7.jpg" alt="day7" onclick="showModal(this.src)" onerror="smartImageFallback(this, 'day7')">
+          <img src="images/day7.jpg" alt="day7" onclick="showModal(this.src)" onerror="smartImageFallback(this, 'day7')">
         </div>
       </div>
     </div>
@@ -356,21 +352,19 @@
       <div class="card">
         <div class="card-title">沖繩地圖</div>
         <div class="img-box">
-          <img src="image/day8.jpg" alt="day8" onclick="showModal(this.src)" onerror="smartImageFallback(this, 'day8')">
+          <img src="images/day8.jpg" alt="day8" onclick="showModal(this.src)" onerror="smartImageFallback(this, 'day8')">
         </div>
       </div>
     </div>
 
   </div>
 
-  <!-- Modal Lightbox (全螢幕大圖預覽) -->
   <div id="imageModal" class="modal" onclick="closeModal()">
     <span class="modal-close">&times;</span>
     <img id="modalImg" src="" alt="大圖預覽">
   </div>
 
   <script>
-    // Tab 切換與 localStorage 記憶防錯保護
     function openTab(tabId) {
       const contents = document.querySelectorAll('.tab-content');
       const buttons = document.querySelectorAll('.tab-button');
@@ -389,35 +383,27 @@
 
       try {
         localStorage.setItem('activeOkinawaTab', tabId);
-      } catch (e) {
-        console.warn('localStorage 寫入受限:', e);
-      }
+      } catch (e) {}
     }
 
-    // 載入備援機制 (Fallback)
     window.addEventListener('DOMContentLoaded', () => {
       let savedTab = 'hotel';
       try {
         savedTab = localStorage.getItem('activeOkinawaTab') || 'hotel';
-      } catch (e) {
-        console.warn('localStorage 讀取受限:', e);
-      }
+      } catch (e) {}
       
       if (!document.getElementById(savedTab)) savedTab = 'hotel';
       openTab(savedTab);
     });
 
-    // 智慧圖片備援機制：自動尋找 image/ 與 images/，並嘗試 jpg/png/jpeg 或無副檔名
     function smartImageFallback(img, filename) {
       const paths = [
-        `image/${filename}.jpg`,
-        `images/${filename}.jpg`,
-        `image/${filename}.png`,
-        `images/${filename}.png`,
-        `image/${filename}.jpeg`,
-        `images/${filename}.jpeg`,
-        `image/${filename}`,
-        `images/${filename}`
+        `images/${filename}.jpg`, `image/${filename}.jpg`,
+        `images/${filename}.png`, `image/${filename}.png`,
+        `images/${filename}.jpeg`, `image/${filename}.jpeg`,
+        `images/${filename}.JPG`, `image/${filename}.JPG`,
+        `images/${filename}.PNG`, `image/${filename}.PNG`,
+        `images/${filename}`, `image/${filename}`
       ];
       
       let step = parseInt(img.dataset.step || "0");
@@ -429,7 +415,6 @@
       }
     }
 
-    // Modal Lightbox 大圖預覽
     function showModal(src) {
       if (!src) return;
       const modal = document.getElementById('imageModal');
