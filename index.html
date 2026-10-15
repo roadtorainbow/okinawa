@@ -44,7 +44,7 @@
             margin-bottom: 0.5rem;
         }
 
-        /* 導覽分頁按鈕 - 指定 1.5rem */
+        /* 導覽分頁按鈕 */
         .nav-tabs {
             display: flex;
             overflow-x: auto;
@@ -59,7 +59,7 @@
 
         .tab-btn {
             padding: 1.2rem 1.4rem;
-            font-size: 1.5rem; /* 頁籤 1.5rem */
+            font-size: 1.5rem;
             font-weight: bold;
             border: none;
             background: none;
@@ -122,19 +122,21 @@
             font-size: 1.5rem;
         }
 
-        /* 恢復第一欄（時間欄）原來的兩排對齊寬度與原始字體大小 */
-        th:first-child {
-            width: 30%;
+        /* 縮小第一欄寬度，讓時間與行程內容緊靠，消除中間大空白 */
+        th:first-child, td:first-child {
+            width: 1%;
+            white-space: nowrap;
+            padding-right: 1.2rem;
         }
 
+        /* 時間欄字體指定為 1.3rem */
         td:first-child {
-            width: 30%;
-            font-size: 1.15rem; /* 時間維持原本適中的大小 */
+            font-size: 1.3rem;
         }
 
-        /* 行程內容欄位字體指定為 1.5rem */
+        /* 行程內容欄位字體為 1.5rem */
         td:nth-child(2) {
-            font-size: 1.5rem; /* 行程內容內文 1.5rem */
+            font-size: 1.5rem;
         }
 
         tr:nth-child(even) {
@@ -230,10 +232,10 @@
 
         @media (max-width: 600px) {
             .tab-btn, th, td:nth-child(2), .card {
-                font-size: 1.35rem; /* 手機適度微調防止極端換行 */
+                font-size: 1.35rem;
             }
             td:first-child {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
             h2 {
                 font-size: 1.6rem;
