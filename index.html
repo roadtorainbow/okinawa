@@ -11,7 +11,7 @@
             --secondary-color: #00b4d8;
             --bg-color: #f8f9fa;
             --card-bg: #ffffff;
-            --text-color: #212529;
+            --text-color: #111111;
             --border-color: #dee2e6;
             --accent-color: #e63946;
         }
@@ -26,21 +26,21 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
-            font-size: 1.15rem; /* 內文 1.1em ~ 1.2em */
+            font-size: 1.4rem; /* 大幅放大內文字級 */
             line-height: 1.6;
-            padding-bottom: 50px;
+            padding-bottom: 60px;
         }
 
         header {
             background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
             color: white;
             text-align: center;
-            padding: 1.5rem 1rem;
+            padding: 1.8rem 1rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         header h1 {
-            font-size: 1.8rem; /* 標題至少 1.5rem ~ 2rem */
+            font-size: 2.3rem; /* 放大標題 */
             margin-bottom: 0.5rem;
         }
 
@@ -49,24 +49,24 @@
             display: flex;
             overflow-x: auto;
             background-color: #ffffff;
-            border-bottom: 2px solid var(--border-color);
+            border-bottom: 3px solid var(--border-color);
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
             -webkit-overflow-scrolling: touch;
         }
 
         .tab-btn {
-            padding: 1rem 1.2rem;
-            font-size: 1.1rem;
+            padding: 1.2rem 1.4rem;
+            font-size: 1.3rem; /* 放大頁籤按鈕字體 */
             font-weight: bold;
             border: none;
             background: none;
-            color: #495057;
+            color: #333333;
             cursor: pointer;
             white-space: nowrap;
-            border-bottom: 4px solid transparent;
+            border-bottom: 5px solid transparent;
             transition: all 0.2s ease;
         }
 
@@ -91,33 +91,27 @@
         }
 
         h2 {
-            font-size: 1.6rem; /* 標題 1.5rem ~ 2rem */
+            font-size: 2rem; /* 放大章節標題 */
             color: var(--primary-dark);
-            margin-bottom: 1rem;
-            border-left: 5px solid var(--primary-color);
-            padding-left: 0.5rem;
+            margin-bottom: 1.2rem;
+            border-left: 6px solid var(--primary-color);
+            padding-left: 0.6rem;
         }
 
-        h3 {
-            font-size: 1.3rem;
-            color: var(--primary-color);
-            margin: 1.2rem 0 0.6rem 0;
-        }
-
-        /* 表格樣式 */
+        /* 表格樣式放大 */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 1rem 0;
+            margin: 1.2rem 0;
             background-color: var(--card-bg);
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            font-size: 1.1rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            font-size: 1.35rem; /* 顯著放大表格字體 */
         }
 
         th, td {
-            padding: 0.9rem 1rem;
+            padding: 1.1rem 1.2rem; /* 增加邊距方便閱讀 */
             text-align: left;
             border-bottom: 1px solid var(--border-color);
         }
@@ -125,7 +119,8 @@
         th {
             background-color: var(--primary-color);
             color: white;
-            font-weight: 600;
+            font-weight: bold;
+            font-size: 1.45rem;
         }
 
         tr:nth-child(even) {
@@ -135,16 +130,16 @@
         /* 圖片樣式 */
         .img-container {
             width: 100%;
-            margin: 1rem 0;
+            margin: 1.5rem 0;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.12);
             background-color: #e9ecef;
         }
 
         .img-container img {
             width: 100%;
-            height: 350px; /* 建議 300px ~ 400px */
+            height: 380px;
             object-fit: cover;
             display: block;
             cursor: pointer;
@@ -159,10 +154,11 @@
         .card {
             background-color: var(--card-bg);
             border-radius: 8px;
-            padding: 1.2rem;
-            margin-bottom: 1.2rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            border-left: 4px solid var(--secondary-color);
+            padding: 1.4rem;
+            margin-bottom: 1.4rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            border-left: 6px solid var(--secondary-color);
+            font-size: 1.35rem; /* 放大卡片字體 */
         }
 
         .card.warning {
@@ -172,18 +168,18 @@
 
         .card-title {
             font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.55rem; /* 放大卡片標題 */
+            margin-bottom: 0.6rem;
             color: var(--primary-dark);
         }
 
         ul {
-            padding-left: 1.2rem;
+            padding-left: 1.4rem;
             margin-bottom: 1rem;
         }
 
         li {
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.6rem;
         }
 
         /* Lightbox Modal */
@@ -213,24 +209,39 @@
             top: 20px;
             right: 25px;
             color: #fff;
-            font-size: 35px;
+            font-size: 40px;
             font-weight: bold;
             cursor: pointer;
         }
 
         @media (max-width: 600px) {
             body {
-                font-size: 1.1rem;
+                font-size: 1.25rem;
             }
             .tab-btn {
-                padding: 0.8rem 1rem;
-                font-size: 1rem;
+                padding: 1rem 1.1rem;
+                font-size: 1.15rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+            table {
+                font-size: 1.2rem;
+            }
+            th {
+                font-size: 1.25rem;
+            }
+            .card {
+                font-size: 1.2rem;
+            }
+            .card-title {
+                font-size: 1.35rem;
             }
             .img-container img {
-                height: 280px;
+                height: 300px;
             }
             th, td {
-                padding: 0.7rem 0.8rem;
+                padding: 0.8rem 0.9rem;
             }
         }
     </style>
@@ -322,7 +333,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th style="width: 30%;">時間</th>
+                        <th style="width: 32%;">時間</th>
                         <th>行程內容</th>
                     </tr>
                 </thead>
@@ -356,7 +367,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th style="width: 30%;">時間</th>
+                        <th style="width: 32%;">時間</th>
                         <th>行程內容</th>
                     </tr>
                 </thead>
@@ -402,7 +413,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th style="width: 30%;">時間</th>
+                        <th style="width: 32%;">時間</th>
                         <th>行程內容</th>
                     </tr>
                 </thead>
@@ -456,7 +467,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th style="width: 30%;">時間</th>
+                        <th style="width: 32%;">時間</th>
                         <th>行程內容</th>
                     </tr>
                 </thead>
@@ -486,7 +497,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th style="width: 30%;">時間</th>
+                        <th style="width: 32%;">時間</th>
                         <th>行程內容</th>
                     </tr>
                 </thead>
@@ -536,7 +547,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th style="width: 30%;">時間</th>
+                        <th style="width: 32%;">時間</th>
                         <th>行程內容</th>
                     </tr>
                 </thead>
@@ -570,7 +581,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th style="width: 30%;">時間</th>
+                        <th style="width: 32%;">時間</th>
                         <th>行程內容</th>
                     </tr>
                 </thead>
@@ -623,7 +634,6 @@
 
             function tryNext() {
                 if (currentIndex >= attempts.length) {
-                    // 若所有路徑與格式皆找不到檔案，隱藏該圖片區塊，避免破圖
                     if (imgElement.parentElement && imgElement.parentElement.classList.contains('img-container')) {
                         imgElement.parentElement.style.display = 'none';
                     } else {
@@ -678,14 +688,12 @@
                 targetTab.classList.add('active');
             }
 
-            // 比對並激活按鈕
             btns.forEach(btn => {
                 if (btn.getAttribute('onclick').includes("'" + tabId + "'")) {
                     btn.classList.add('active');
                 }
             });
 
-            // 儲存至 localStorage 並附帶 Error Handling
             try {
                 localStorage.setItem('activeOkinawaTab', tabId);
             } catch (e) {
