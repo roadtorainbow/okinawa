@@ -26,7 +26,7 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
-            font-size: 1.4rem; /* 大幅放大內文字級 */
+            font-size: 1.5rem; /* 全頁基本字體設定為 1.5rem */
             line-height: 1.6;
             padding-bottom: 60px;
         }
@@ -40,7 +40,7 @@
         }
 
         header h1 {
-            font-size: 2.3rem; /* 放大標題 */
+            font-size: 2.2rem;
             margin-bottom: 0.5rem;
         }
 
@@ -59,7 +59,7 @@
 
         .tab-btn {
             padding: 1.2rem 1.4rem;
-            font-size: 1.3rem; /* 放大頁籤按鈕字體 */
+            font-size: 1.5rem; /* 頁籤字體調至 1.5rem */
             font-weight: bold;
             border: none;
             background: none;
@@ -91,14 +91,14 @@
         }
 
         h2 {
-            font-size: 2rem; /* 放大章節標題 */
+            font-size: 2rem;
             color: var(--primary-dark);
             margin-bottom: 1.2rem;
             border-left: 6px solid var(--primary-color);
             padding-left: 0.6rem;
         }
 
-        /* 表格樣式放大 */
+        /* 表格樣式調整 */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -107,20 +107,27 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-            font-size: 1.35rem; /* 顯著放大表格字體 */
+            font-size: 1.5rem; /* 表格內文字體調至 1.5rem */
         }
 
         th, td {
-            padding: 1.1rem 1.2rem; /* 增加邊距方便閱讀 */
+            padding: 1.1rem 1rem;
             text-align: left;
             border-bottom: 1px solid var(--border-color);
+        }
+
+        /* 縮小時間欄位寬度，讓「行程內容」往左靠、緊接時間欄，避免中間間距過寬 */
+        th:first-child, td:first-child {
+            width: 1%;
+            white-space: nowrap;
+            padding-right: 1.5rem;
         }
 
         th {
             background-color: var(--primary-color);
             color: white;
             font-weight: bold;
-            font-size: 1.45rem;
+            font-size: 1.5rem;
         }
 
         tr:nth-child(even) {
@@ -158,7 +165,7 @@
             margin-bottom: 1.4rem;
             box-shadow: 0 2px 6px rgba(0,0,0,0.08);
             border-left: 6px solid var(--secondary-color);
-            font-size: 1.35rem; /* 放大卡片字體 */
+            font-size: 1.5rem;
         }
 
         .card.warning {
@@ -168,7 +175,7 @@
 
         .card-title {
             font-weight: bold;
-            font-size: 1.55rem; /* 放大卡片標題 */
+            font-size: 1.6rem;
             margin-bottom: 0.6rem;
             color: var(--primary-dark);
         }
@@ -215,33 +222,20 @@
         }
 
         @media (max-width: 600px) {
-            body {
-                font-size: 1.25rem;
-            }
-            .tab-btn {
-                padding: 1rem 1.1rem;
-                font-size: 1.15rem;
+            body, .tab-btn, table, th, .card {
+                font-size: 1.35rem; /* 手機微調為 1.35rem 防溢出 */
             }
             h2 {
                 font-size: 1.6rem;
-            }
-            table {
-                font-size: 1.2rem;
-            }
-            th {
-                font-size: 1.25rem;
-            }
-            .card {
-                font-size: 1.2rem;
-            }
-            .card-title {
-                font-size: 1.35rem;
             }
             .img-container img {
                 height: 300px;
             }
             th, td {
-                padding: 0.8rem 0.9rem;
+                padding: 0.8rem 0.8rem;
+            }
+            th:first-child, td:first-child {
+                padding-right: 1rem;
             }
         }
     </style>
@@ -333,7 +327,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th style="width: 32%;">時間</th>
+                        <th>時間</th>
                         <th>行程內容</th>
                     </tr>
                 </thead>
@@ -367,7 +361,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th style="width: 32%;">時間</th>
+                        <th>時間</th>
                         <th>行程內容</th>
                     </tr>
                 </thead>
@@ -413,7 +407,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th style="width: 32%;">時間</th>
+                        <th>時間</th>
                         <th>行程內容</th>
                     </tr>
                 </thead>
@@ -467,7 +461,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th style="width: 32%;">時間</th>
+                        <th>時間</th>
                         <th>行程內容</th>
                     </tr>
                 </thead>
@@ -497,7 +491,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th style="width: 32%;">時間</th>
+                        <th>時間</th>
                         <th>行程內容</th>
                     </tr>
                 </thead>
@@ -547,7 +541,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th style="width: 32%;">時間</th>
+                        <th>時間</th>
                         <th>行程內容</th>
                     </tr>
                 </thead>
@@ -581,7 +575,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th style="width: 32%;">時間</th>
+                        <th>時間</th>
                         <th>行程內容</th>
                     </tr>
                 </thead>
