@@ -145,19 +145,6 @@
             background-color: #f8fafc;
         }
 
-        /* 警示與提醒區塊 */
-        .alert-box {
-            background-color: #fff3cd;
-            border-left: 5px solid #ffc107;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 4px;
-        }
-
-        .alert-box strong {
-            color: #856404;
-        }
-
         /* 圖片區塊與大圖彈窗 (Modal) */
         .img-container {
             width: 100%;
@@ -243,71 +230,70 @@
 <body>
 
     <header>
-        <h1>沖繩 7天6夜自由行手冊</h1>
-        <div class="subtitle">行程、飯店與交通手冊</div>
+        <h1>沖繩 7天6夜行程簡表</h1>
     </header>
 
-    <!-- 導覽頁籤區 -->
+    <!-- 導覽頁籤區 (嚴格按照需求圖片設定) -->
     <nav id="nav-bar">
         <button onclick="switchTab('hotel')" id="tab-hotel">飯店資訊</button>
         <button onclick="switchTab('flight')" id="tab-flight">航班資訊</button>
-        <button onclick="switchTab('notice')" id="tab-notice">注意事項</button>
         <button onclick="switchTab('map')" id="tab-map">沖繩地圖</button>
-        <button onclick="switchTab('day1')" id="tab-day1">Day 1</button>
-        <button onclick="switchTab('day2')" id="tab-day2">Day 2</button>
-        <button onclick="switchTab('day3')" id="tab-day3">Day 3</button>
-        <button onclick="switchTab('day4')" id="tab-day4">Day 4</button>
-        <button onclick="switchTab('day5')" id="tab-day5">Day 5</button>
-        <button onclick="switchTab('day6')" id="tab-day6">Day 6</button>
-        <button onclick="switchTab('day7')" id="tab-day7">Day 7</button>
+        <button onclick="switchTab('day1')" id="tab-day1">Day1</button>
+        <button onclick="switchTab('day2')" id="tab-day2">Day2</button>
+        <button onclick="switchTab('day3')" id="tab-day3">Day3</button>
+        <button onclick="switchTab('day4')" id="tab-day4">Day4</button>
+        <button onclick="switchTab('day5')" id="tab-day5">Day5</button>
+        <button onclick="switchTab('day6')" id="tab-day6">Day6</button>
+        <button onclick="switchTab('day7')" id="tab-day7">Day7</button>
     </nav>
 
     <main>
         <!-- 1. 飯店資訊 -->
         <section id="content-hotel" class="tab-content">
             <div class="card">
-                <h2>住宿飯店資訊</h2>
+                <h2>飯店資訊</h2>
+                <p style="margin-bottom: 1rem;">(皆為雙人兩張床型)</p>
                 
-                <h3>🏨 前4晚：東橫INN 那霸旭橋站前 (旭橋站)</h3>
+                <h3>🏨 前4晚：東橫INN那霸旭橋站前(旭橋站)</h3>
                 <table>
                     <tbody>
                         <tr>
                             <th>早餐時間</th>
-                            <td>06:30 – 09:00</td>
+                            <td>06 : 30 - 9 : 00</td>
                         </tr>
                         <tr>
                             <th>房間規格</th>
-                            <td>雙人兩張床型 (15 平方公尺)</td>
+                            <td>房間面積：15平方公尺，兩張單人床</td>
                         </tr>
                         <tr>
                             <th>單床尺寸</th>
-                            <td>110 × 200 cm</td>
+                            <td>110×200cm</td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="img-container">
-                    <img src="image/hotel1.jpg" alt="東橫INN房間照片" onclick="openModal(this.src)" onerror="handleImageError(this, 'hotel1')">
+                    <img src="image/hotel1.jpg" alt="東橫inn照片" onclick="openModal(this.src)" onerror="handleImageError(this, 'hotel1')">
                 </div>
 
-                <h3>🏨 後2晚：沖繩逸之彩飯店 (牧志站)</h3>
+                <h3>🏨 後2晚：沖繩逸之彩飯店(牧志站)</h3>
                 <table>
                     <tbody>
                         <tr>
                             <th>早餐時間</th>
-                            <td>07:00 – 10:00</td>
+                            <td>07 : 00 - 10 : 00</td>
                         </tr>
                         <tr>
                             <th>房間規格</th>
-                            <td>雙人兩張床型 (20 平方公尺)</td>
+                            <td>房間面積：20平方公尺，兩張單人床</td>
                         </tr>
                         <tr>
                             <th>單床尺寸</th>
-                            <td>120 × 200 cm</td>
+                            <td>120×200cm</td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="img-container">
-                    <img src="image/hotel2.jpg" alt="逸之彩飯店房間照片" onclick="openModal(this.src)" onerror="handleImageError(this, 'hotel2')">
+                    <img src="image/hotel2.jpg" alt="逸之彩照片" onclick="openModal(this.src)" onerror="handleImageError(this, 'hotel2')">
                 </div>
             </div>
         </section>
@@ -315,55 +301,343 @@
         <!-- 2. 航班資訊 -->
         <section id="content-flight" class="tab-content">
             <div class="card">
-                <h2>航班與搭機規定</h2>
+                <h2>航班資訊</h2>
                 
-                <h3>✈️ 往返航班明細</h3>
+                <h3>✈️ 往返航班與車次明細</h3>
                 <table>
                     <thead>
                         <tr>
                             <th>日期</th>
-                            <th>航線與車次 / 班機</th>
+                            <th>內容</th>
                             <th>時間</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td rowspan="2"><strong>11/07 (六) 去程</strong></td>
-                            <td>台鐵 407 車次 (自強 3000) 花蓮 ➔ 台北</td>
-                            <td>08:57 – 11:28</td>
+                            <td>花蓮到台北 (台鐵407車次自強3000)</td>
+                            <td>08 : 57 - 11 : 28</td>
                         </tr>
                         <tr>
-                            <td>中華航空 CI122 桃園 ➔ 沖繩</td>
-                            <td>16:50 – 19:25</td>
+                            <td>桃園-沖繩 (華航 CI122)</td>
+                            <td>16:50 - 19:25</td>
                         </tr>
                         <tr>
                             <td rowspan="2"><strong>11/13 (五) 回程</strong></td>
-                            <td>中華航空 CI121 沖繩 ➔ 桃園</td>
-                            <td>11:55 – 12:35</td>
+                            <td>沖繩-桃園 (華航 CI121)</td>
+                            <td>11:55 - 12:35</td>
                         </tr>
                         <tr>
-                            <td>台鐵 普悠瑪 236 車次 台北 ➔ 花蓮</td>
-                            <td>15:43 – 18:01</td>
+                            <td>台北-花蓮 (普悠瑪236)</td>
+                            <td>15:43 - 18:01</td>
                         </tr>
                     </tbody>
                 </table>
 
-                <h3>🧳 行李托運與隨身限制</h3>
+                <h3>🧳 行李與隨身物品規定</h3>
                 <table>
                     <tbody>
                         <tr>
-                            <th>託運行李</th>
-                            <td>每人 <strong>23 公斤</strong></td>
-                        </tr>
-                        <tr>
-                            <th>手提行李</th>
-                            <td>每人 <strong>7 公斤</strong></td>
+                            <th>重量限制</th>
+                            <td>手提 7 公斤，託運 23 公斤</td>
                         </tr>
                         <tr>
                             <th>行動電源與鋰電池</th>
-                            <td><strong>必須手提隨身攜帶</strong>，航程中全程禁止使用。</td>
+                            <td>必須手提，航程中全程禁止使用。</td>
                         </tr>
                         <tr>
                             <th>液體、膠狀及噴霧類</th>
                             <td>
-                                • <strong>手提：</strong>每瓶限制 100ml 以
+                                • 手提：每瓶限 100ml 以內，並須全部裝入 1 公升以下透明夾鏈袋。<br>
+                                • 託運：超過 100ml 一律託運。
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>銳利物品</th>
+                            <td>各種剪刀、刀具及金屬指甲剪等嚴禁隨身攜帶，必須託運。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 3. 沖繩地圖 -->
+        <section id="content-map" class="tab-content">
+            <div class="card">
+                <h2>沖繩地圖</h2>
+                <div class="img-container">
+                    <img src="image/day8.jpg" alt="沖繩地圖" onclick="openModal(this.src)" onerror="handleImageError(this, 'day8')">
+                </div>
+            </div>
+        </section>
+
+        <!-- Day1 -->
+        <section id="content-day1" class="tab-content">
+            <div class="card">
+                <h2>Day 1 (11/07 六) 抵達沖繩</h2>
+                <div class="img-container">
+                    <img src="image/day1.jpg" alt="Day1照片" onclick="openModal(this.src)" onerror="handleImageError(this, 'day1')">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;">時間</th>
+                            <th>行程</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>08 : 57 - 11 : 28</td><td>花蓮到台北 (台鐵407車次自強3000)</td></tr>
+                        <tr><td>16:50 - 19:25</td><td>桃園-沖繩 (華航 CI122)</td></tr>
+                        <tr><td>20:30</td><td>電車至旭橋站，東橫INN入住</td></tr>
+                        <tr><td>21 : 00</td><td>晚餐預計吃「Ryukyu Menya Kariyushi Soba 軟骨拉麵」</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Day2 -->
+        <section id="content-day2" class="tab-content">
+            <div class="card">
+                <h2>Day 2 (11/08 日) kkday北部一日遊巴士</h2>
+                <div class="img-container">
+                    <img src="image/day2.jpg" alt="Day2照片" onclick="openModal(this.src)" onerror="handleImageError(this, 'day2')">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;">時間</th>
+                            <th>行程</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>06 : 00 - 07 : 00</td><td>東橫inn吃早餐</td></tr>
+                        <tr><td>07:50 - 08 : 00</td><td>那霸縣廳前 RYUBO百貨 BLUE SEAL 店鋪前集合 (07:50前集合，08:00出發)</td></tr>
+                        <tr><td>09 : 20 - 09 : 50</td><td>萬座毛</td></tr>
+                        <tr><td>10 : 50 - 11 : 20</td><td>古宇利海洋塔</td></tr>
+                        <tr><td>11 : 40 - 15 : 40</td><td>美麗海水族館</td></tr>
+                        <tr><td>18 : 45</td><td>回到縣廳前</td></tr>
+                        <tr><td>19 : 00</td><td>晚餐預計吃「金澤壽司 那霸國際通縣廳前店」</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Day3 -->
+        <section id="content-day3" class="tab-content">
+            <div class="card">
+                <h2>Day 3 (11/09 一) kkday南部一日遊巴士</h2>
+                <div class="img-container">
+                    <img src="image/day3.jpg" alt="Day3照片" onclick="openModal(this.src)" onerror="handleImageError(this, 'day3')">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;">時間</th>
+                            <th>行程</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>06 : 00 - 07 : 00</td><td>東橫inn吃早餐</td></tr>
+                        <tr><td>07 : 20 - 07:50</td><td>縣廳前觀光巴士乘降所集合 (08:00出發)</td></tr>
+                        <tr><td>08 : 50 - 09 : 30</td><td>知念岬公園</td></tr>
+                        <tr><td>09 : 50 - 10 : 40</td><td>新原海灘 (自費玻璃船)</td></tr>
+                        <tr><td>11 : 00 - 13 : 30</td><td>玉泉洞&沖繩世界王國村 (12:30有EISA太鼓舞)</td></tr>
+                        <tr><td>14 : 00 - 15 : 00</td><td>系滿魚市場</td></tr>
+                        <tr><td>15 : 10 - 17 : 20</td><td>iias沖繩豐崎購物中心(DMM水族館) 或是 瀨長島 二選一</td></tr>
+                        <tr><td>17:25 - 17 : 50</td><td>抵達縣廳前觀光巴士乘降所</td></tr>
+                        <tr><td>18 : 30</td><td>預計吃晚餐「Uguisu串燒」</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Day4 -->
+        <section id="content-day4" class="tab-content">
+            <div class="card">
+                <h2>Day 4 (11/10 二) 採購與看秀</h2>
+                <div class="img-container">
+                    <img src="image/day4.jpg" alt="Day4照片" onclick="openModal(this.src)" onerror="handleImageError(this, 'day4')">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;">時間</th>
+                            <th>行程</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>07 : 00 - 08 : 00</td><td>東橫inn吃早餐</td></tr>
+                        <tr><td>10 : 00 - 18 : 00</td><td>PARCO CITY (購物行程/午餐/晚餐)</td></tr>
+                        <tr><td>20 : 30 - 22 : 00</td><td>Churasun 6現代熱舞秀 (帶護照，20:00開放入場，20:20前必須入場，不然票會被賣掉)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Day5 -->
+        <section id="content-day5" class="tab-content">
+            <div class="card">
+                <h2>Day 5 (11/11 三) 換飯店 & Klook一日遊巴士</h2>
+                <div class="img-container">
+                    <img src="image/day5.jpg" alt="Day5照片" onclick="openModal(this.src)" onerror="handleImageError(this, 'day5')">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;">時間</th>
+                            <th>行程</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>07 : 00 - 08 : 00</td><td>東橫inn吃早餐</td></tr>
+                        <tr><td>09 : 00 - 11 : 00</td><td>東橫INN退房，行李移至逸之彩寄存</td></tr>
+                        <tr><td>12:10 - 12 : 30</td><td>縣廳前站Blue Seal集合(12:10)，搭乘Klook巴士(12:30)</td></tr>
+                        <tr><td>12 : 45 - 13 : 45</td><td>波上宮</td></tr>
+                        <tr><td>15 : 00 - 15 : 40</td><td>殘波岬</td></tr>
+                        <tr><td>16 : 10 - 18 : 10</td><td>美國村 (晚餐預約16:30「琉球的牛」精緻燒肉)</td></tr>
+                        <tr><td>18 : 50 - 20 : 30</td><td>東南植物樂園燈光秀</td></tr>
+                        <tr><td>21:30</td><td>回縣廳前解散</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Day6 -->
+        <section id="content-day6" class="tab-content">
+            <div class="card">
+                <h2>Day 6 (11/12 四)</h2>
+                <div class="img-container">
+                    <img src="image/day6.jpg" alt="Day6照片" onclick="openModal(this.src)" onerror="handleImageError(this, 'day6')">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;">時間</th>
+                            <th>行程</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>07 : 00 - 08 : 00</td><td>逸之彩飯店吃早餐</td></tr>
+                        <tr><td>10 : 00 - 15 : 00</td><td>沖繩兒童王國</td></tr>
+                        <tr><td>16 : 00 - 17 : 00</td><td>首里城或逛平和通</td></tr>
+                        <tr><td>18 : 30</td><td>晚餐「沖繩民謠ライブ居酒屋 ~奏~國際通り店」</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Day7 -->
+        <section id="content-day7" class="tab-content">
+            <div class="card">
+                <h2>Day 7 (11/13 五) 返家</h2>
+                <div class="img-container">
+                    <img src="image/day7.jpg" alt="Day7照片" onclick="openModal(this.src)" onerror="handleImageError(this, 'day7')">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;">時間</th>
+                            <th>行程</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>07 : 00 - 08 : 00</td><td>逸之彩飯店吃早餐</td></tr>
+                        <tr><td>08 : 00 - 08 : 30</td><td>退房，搭uber前往沖繩那霸機場</td></tr>
+                        <tr><td>11:55 - 12:35</td><td>沖繩-桃園 (華航 CI121)</td></tr>
+                        <tr><td>15:43 - 18:01</td><td>台北-花蓮 (普悠瑪236)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- 全螢幕大圖 Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script>
+        // 切換分頁並記錄至 localStorage
+        function switchTab(tabName) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            const buttons = document.querySelectorAll('nav button');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            const targetContent = document.getElementById('content-' + tabName);
+            const targetButton = document.getElementById('tab-' + tabName);
+
+            if (targetContent && targetButton) {
+                targetContent.classList.add('active');
+                targetButton.classList.add('active');
+
+                // 本地寫入保護
+                try {
+                    localStorage.setItem('okinawa_last_tab', tabName);
+                } catch (e) {
+                    console.warn('localStorage 寫入失敗 (可能處於私密瀏覽或受限模式):', e);
+                }
+            }
+        }
+
+        // 初始化頁面與讀取歷史頁籤 (Fallback 備援機制)
+        function initApp() {
+            let defaultTab = 'hotel';
+            try {
+                const savedTab = localStorage.getItem('okinawa_last_tab');
+                if (savedTab && document.getElementById('content-' + savedTab)) {
+                    defaultTab = savedTab;
+                }
+            } catch (e) {
+                console.warn('localStorage 讀取失敗，使用預設分頁:', e);
+            }
+            switchTab(defaultTab);
+        }
+
+        // 圖片自動備援載入機制 (Fallback Engine)
+        function handleImageError(imgElement, baseName) {
+            const folders = ['image/', 'images/', ''];
+            const exts = ['.jpg', '.png', '.jpeg', ''];
+
+            let currentFolderIdx = parseInt(imgElement.getAttribute('data-folder-idx') || '0');
+            let currentExtIdx = parseInt(imgElement.getAttribute('data-ext-idx') || '0');
+
+            currentExtIdx++;
+            if (currentExtIdx >= exts.length) {
+                currentExtIdx = 0;
+                currentFolderIdx++;
+            }
+
+            if (currentFolderIdx >= folders.length) {
+                const container = imgElement.parentElement;
+                if (container && container.classList.contains('img-container')) {
+                    container.style.display = 'none';
+                }
+                return;
+            }
+
+            imgElement.setAttribute('data-folder-idx', currentFolderIdx);
+            imgElement.setAttribute('data-ext-idx', currentExtIdx);
+
+            const nextSrc = folders[currentFolderIdx] + baseName + exts[currentExtIdx];
+            imgElement.src = nextSrc;
+        }
+
+        // Modal Lightbox 彈出放大圖片檢視
+        function openModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+            modal.style.display = "block";
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = "none";
+        }
+
+        document.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>
