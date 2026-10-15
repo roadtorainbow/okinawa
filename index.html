@@ -26,7 +26,7 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
-            font-size: 1.5rem; /* 全頁基本字體設定為 1.5rem */
+            font-size: 1.5rem;
             line-height: 1.6;
             padding-bottom: 60px;
         }
@@ -44,7 +44,7 @@
             margin-bottom: 0.5rem;
         }
 
-        /* 導覽分頁按鈕 */
+        /* 導覽分頁按鈕 - 指定 1.5rem */
         .nav-tabs {
             display: flex;
             overflow-x: auto;
@@ -59,7 +59,7 @@
 
         .tab-btn {
             padding: 1.2rem 1.4rem;
-            font-size: 1.5rem; /* 頁籤字體調至 1.5rem */
+            font-size: 1.5rem; /* 頁籤 1.5rem */
             font-weight: bold;
             border: none;
             background: none;
@@ -107,7 +107,6 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-            font-size: 1.5rem; /* 表格內文字體調至 1.5rem */
         }
 
         th, td {
@@ -116,18 +115,26 @@
             border-bottom: 1px solid var(--border-color);
         }
 
-        /* 縮小時間欄位寬度，讓「行程內容」往左靠、緊接時間欄，避免中間間距過寬 */
-        th:first-child, td:first-child {
-            width: 1%;
-            white-space: nowrap;
-            padding-right: 1.5rem;
-        }
-
         th {
             background-color: var(--primary-color);
             color: white;
             font-weight: bold;
             font-size: 1.5rem;
+        }
+
+        /* 恢復第一欄（時間欄）原來的兩排對齊寬度與原始字體大小 */
+        th:first-child {
+            width: 30%;
+        }
+
+        td:first-child {
+            width: 30%;
+            font-size: 1.15rem; /* 時間維持原本適中的大小 */
+        }
+
+        /* 行程內容欄位字體指定為 1.5rem */
+        td:nth-child(2) {
+            font-size: 1.5rem; /* 行程內容內文 1.5rem */
         }
 
         tr:nth-child(even) {
@@ -222,8 +229,11 @@
         }
 
         @media (max-width: 600px) {
-            body, .tab-btn, table, th, .card {
-                font-size: 1.35rem; /* 手機微調為 1.35rem 防溢出 */
+            .tab-btn, th, td:nth-child(2), .card {
+                font-size: 1.35rem; /* 手機適度微調防止極端換行 */
+            }
+            td:first-child {
+                font-size: 1.1rem;
             }
             h2 {
                 font-size: 1.6rem;
@@ -233,9 +243,6 @@
             }
             th, td {
                 padding: 0.8rem 0.8rem;
-            }
-            th:first-child, td:first-child {
-                padding-right: 1rem;
             }
         }
     </style>
