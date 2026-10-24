@@ -143,6 +143,17 @@
             background-color: #f8f9fa;
         }
 
+        /* 保險專用表格第一欄（險種項目）寬度取消 1% 限制 */
+        .insurance-table th:first-child, .insurance-table td:first-child {
+            width: auto;
+            white-space: normal;
+        }
+
+        /* 保險表格字體大小設定 */
+        .insurance-table td {
+            font-size: 1.35rem !important;
+        }
+
         /* 圖片樣式 */
         .img-container {
             width: 100%;
@@ -246,6 +257,9 @@
             th, td {
                 padding: 0.8rem 0.8rem;
             }
+            .insurance-table td {
+                font-size: 1.15rem !important;
+            }
         }
     </style>
 </head>
@@ -266,6 +280,7 @@
         <button class="tab-btn" onclick="switchTab('day5')">Day 5</button>
         <button class="tab-btn" onclick="switchTab('day6')">Day 6</button>
         <button class="tab-btn" onclick="switchTab('day7')">Day 7</button>
+        <button class="tab-btn" onclick="switchTab('insurance')">旅遊保險</button>
     </nav>
 
     <div class="container">
@@ -610,6 +625,134 @@
             <div class="img-container">
                 <img data-src="day7" alt="Day 7 景點照片" onclick="openLightbox(this.src)">
             </div>
+        </div>
+
+        <!-- 旅遊保險 -->
+        <div id="insurance" class="tab-content">
+            <h2>富邦快樂旅平卡 保險內容[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span)</h2>
+
+            <div class="card">
+                <div class="card-title">投保基本資訊[span_2](start_span)[span_2](end_span)</div>
+                <p><strong>專案名稱：</strong>新快樂旅平卡_國外300萬_115.04(含法傳)[span_3](start_span)[span_3](end_span)</p>
+                <p><strong>旅遊國家：</strong>日本（沖繩）[span_4](start_span)[span_4](end_span)</p>
+                <p><strong>總投保人數：</strong>2 人[span_5](start_span)[span_5](end_span)</p>
+                <p><strong>總保險費：</strong>1,356 元[span_6](start_span)[span_6](end_span)</p>
+            </div>
+
+            <table class="insurance-table">
+                <thead>
+                    <tr>
+                        <th>險種項目[span_7](start_span)[span_7](end_span)[span_8](start_span)[span_8](end_span)</th>
+                        <th>承保範圍[span_9](start_span)[span_9](end_span)[span_10](start_span)[span_10](end_span)</th>
+                        <th>保險金額[span_11](start_span)[span_11](end_span)[span_12](start_span)[span_12](end_span)</th>
+                        <th>自負額[span_13](start_span)[span_13](end_span)[span_14](start_span)[span_14](end_span)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>T115 富邦產物安心遊個人旅行綜合保險：食品中毒補償保險[span_15](start_span)[span_15](end_span)</td>
+                        <td>每次[span_16](start_span)[span_16](end_span)</td>
+                        <td>6,000 元[span_17](start_span)[span_17](end_span)</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>T152 安心遊個人旅行保障保險：海外突發疾病醫療健康保險[span_18](start_span)[span_18](end_span)</td>
+                        <td>每人體傷[span_19](start_span)[span_19](end_span)</td>
+                        <td>300,000 元[span_20](start_span)[span_20](end_span)</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>T153 安心遊個人旅行保障保險：旅行平安保險[span_21](start_span)[span_21](end_span)</td>
+                        <td>每人死亡失能[span_22](start_span)[span_22](end_span)</td>
+                        <td>3,000,000 元[span_23](start_span)[span_23](end_span)</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>T155 安心遊個人旅行保障保險：傷害醫療費用保險[span_24](start_span)[span_24](end_span)</td>
+                        <td>每人體傷[span_25](start_span)[span_25](end_span)</td>
+                        <td>300,000 元[span_26](start_span)[span_26](end_span)</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>TA28 安心個人旅行綜合保險-甲型：個人責任保險[span_27](start_span)[span_27](end_span)</td>
+                        <td>每一事故最高[span_28](start_span)[span_28](end_span)</td>
+                        <td>1,000,000 元[span_29](start_span)[span_29](end_span)</td>
+                        <td>2,500 元[span_30](start_span)[span_30](end_span)</td>
+                    </tr>
+                    <tr>
+                        <td>TA29 安心個人旅行綜合保險-甲型：緊急救援費用保險[span_31](start_span)[span_31](end_span)</td>
+                        <td>保期內最高[span_32](start_span)[span_32](end_span)</td>
+                        <td>2,000,000 元[span_33](start_span)[span_33](end_span)</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>TA30 安心個人旅行綜合保險-甲型：居家火災臨時住宿補償保險[span_34](start_span)[span_34](end_span)</td>
+                        <td>定額給付[span_35](start_span)[span_35](end_span)</td>
+                        <td>30,000 元[span_36](start_span)[span_36](end_span)</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>TA31 安心個人旅行綜合保險-甲型：居家竊盜損失補償保險[span_37](start_span)[span_37](end_span)</td>
+                        <td>定額給付[span_38](start_span)[span_38](end_span)</td>
+                        <td>20,000 元[span_39](start_span)[span_39](end_span)</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>TA35 安心個人旅行綜合保險-甲型：特定票券取消補償保險[span_40](start_span)[span_40](end_span)</td>
+                        <td>定額給付[span_41](start_span)[span_41](end_span)</td>
+                        <td>1,000 元[span_42](start_span)[span_42](end_span)</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>TA37 安心個人旅行綜合保險-甲型：水陸公共交通工具延誤保險[span_43](start_span)[span_43](end_span)</td>
+                        <td>定額給付[span_44](start_span)[span_44](end_span)</td>
+                        <td>1,000 元[span_45](start_span)[span_45](end_span)</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>TA45 享樂個人海外旅行不便保險：旅程取消保險（實支實付）[span_46](start_span)[span_46](end_span)</td>
+                        <td>保期內最高[span_47](start_span)[span_47](end_span)</td>
+                        <td>60,000 元[span_48](start_span)[span_48](end_span)</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>TA46 享樂個人海外旅行不便保險：班機延誤保險（定額給付-累進式）[span_49](start_span)[span_49](end_span)</td>
+                        <td>定額給付／每滿四小時／2倍型／每次最高給付金額[span_50](start_span)[span_50](end_span)</td>
+                        <td>5,000 元 <br>(最高 10,000 元)[span_51](start_span)[span_51](end_span)</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>TA47 享樂個人海外旅行不便保險：旅程更改保險（實支實付）[span_52](start_span)[span_52](end_span)</td>
+                        <td>保期內最高[span_53](start_span)[span_53](end_span)</td>
+                        <td>60,000 元[span_54](start_span)[span_54](end_span)</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>TA48 享樂個人海外旅行不便保險：行李延誤保險（定額給付）[span_55](start_span)[span_55](end_span)</td>
+                        <td>定額給付[span_56](start_span)[span_56](end_span)</td>
+                        <td>6,000 元[span_57](start_span)[span_57](end_span)</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>TA49 享樂個人海外旅行不便保險：行李損失保險（定額給付）[span_58](start_span)[span_58](end_span)</td>
+                        <td>定額給付[span_59](start_span)[span_59](end_span)</td>
+                        <td>6,000 元[span_60](start_span)[span_60](end_span)</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>TA50 享樂個人海外旅行不便保險：旅行文件損失保險（定額給付）[span_61](start_span)[span_61](end_span)</td>
+                        <td>定額給付[span_62](start_span)[span_62](end_span)</td>
+                        <td>3,000 元[span_63](start_span)[span_63](end_span)</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>TA38 個人旅行綜合保險改降非原定機場費用附加條款[span_64](start_span)[span_64](end_span)</td>
+                        <td>定額給付[span_65](start_span)[span_65](end_span)</td>
+                        <td>5,000 元[span_66](start_span)[span_66](end_span)</td>
+                        <td>—</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
     </div>
