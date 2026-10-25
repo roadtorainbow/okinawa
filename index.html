@@ -22,6 +22,14 @@
             padding: 0;
         }
 
+        html, body {
+            /* 防止不同行動裝置與瀏覽器（如 Brave/Chrome）自動微調或放大文字 (禁用 Font Boosting) */
+            -webkit-text-size-adjust: 100%;
+            -moz-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background-color: var(--bg-color);
