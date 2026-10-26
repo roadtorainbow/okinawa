@@ -467,7 +467,7 @@
             font-weight: 700;
         }
 
-        /* 📊 各大項準備進度卡片：固定為「中」字型大小 */
+        /* 📊 各大項準備進度卡片：固定為「中」字型大小，並優化防換行與間距 */
         .category-progress-card {
             padding: 16px 20px;
             margin-bottom: 18px;
@@ -487,15 +487,15 @@
 
         .cat-progress-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 8px;
         }
 
         .cat-progress-item {
             background: #fffafd;
             border: 1.5px solid #eee4f7;
             border-radius: 14px;
-            padding: 10px 12px;
+            padding: 8px 10px;
             cursor: pointer;
             transition: transform 0.15s ease, border-color 0.15s ease;
         }
@@ -509,22 +509,23 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 1rem !important; /* 固定小卡字型大小 */
+            font-size: 0.95rem !important; /* 稍微縮小防溢出 */
             font-weight: 700;
             margin-bottom: 6px;
+            white-space: nowrap;
         }
 
         .cat-progress-name {
             display: flex;
             align-items: center;
             gap: 4px;
-            overflow: hidden;
-            text-overflow: ellipsis;
             white-space: nowrap;
         }
 
         .cat-progress-val {
             color: #9d85e8;
+            white-space: nowrap;
+            margin-left: 4px;
         }
 
         .cat-progress-track {
@@ -1153,61 +1154,61 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>T115 富邦產物安心遊個人旅行綜合保險：食品中毒補償保險</td>
+                        <td>T115 食品中毒補償保險</td>
                         <td>每次</td>
                         <td>6,000 元</td>
                         <td>—</td>
                     </tr>
                     <tr>
-                        <td>T152 安心遊個人旅行保障保險：海外突發疾病醫療健康保險</td>
+                        <td>T152 海外突發疾病醫療健康保險</td>
                         <td>每人體傷</td>
                         <td>300,000 元</td>
                         <td>—</td>
                     </tr>
                     <tr>
-                        <td>T153 安心遊個人旅行保障保險：旅行平安保險</td>
+                        <td>T153 旅行平安保險</td>
                         <td>每人死亡失能</td>
                         <td>3,000,000 元</td>
                         <td>—</td>
                     </tr>
                     <tr>
-                        <td>T155 安心遊個人旅行保障保險：傷害醫療費用保險</td>
+                        <td>T155 傷害醫療費用保險</td>
                         <td>每人體傷</td>
                         <td>300,000 元</td>
                         <td>—</td>
                     </tr>
                     <tr>
-                        <td>TA28 安心個人旅行綜合保險-甲型：個人責任保險</td>
+                        <td>TA28 個人責任保險</td>
                         <td>每一事故最高</td>
                         <td>1,000,000 元</td>
                         <td>2,500 元</td>
                     </tr>
                     <tr>
-                        <td>TA29 安心個人旅行綜合保險-甲型：緊急救援費用保險</td>
+                        <td>TA29 緊急救援費用保險</td>
                         <td>保期內最高</td>
                         <td>2,000,000 元</td>
                         <td>—</td>
                     </tr>
                     <tr>
-                        <td>TA30 安心個人旅行綜合保險-甲型：居家火災臨時住宿補償保險</td>
+                        <td>TA30 居家火災臨時住宿補償保險</td>
                         <td>定額給付</td>
                         <td>30,000 元</td>
                         <td>—</td>
                     </tr>
                     <tr>
-                        <td>TA31 安心個人旅行綜合保險-甲型：居家竊盜損失補償保險</td>
+                        <td>TA31 居家竊盜損失補償保險</td>
                         <td>定額給付</td>
                         <td>20,000 元</td>
                         <td>—</td>
                     </tr>
                     <tr>
-                        <td>TA35 安心個人旅行綜合保險-甲型：特定票券取消補償保險</td>
+                        <td>TA35 特定票券取消補償保險</td>
                         <td>定額給付</td>
                         <td>1,000 元</td>
                         <td>—</td>
                     </tr>
                     <tr>
-                        <td>TA37 安心個人旅行綜合保險-甲型：水陸公共交通工具延誤保險</td>
+                        <td>TA37 水陸公共交通工具延誤保險</td>
                         <td>定額給付</td>
                         <td>1,000 元</td>
                         <td>—</td>
@@ -1216,7 +1217,7 @@
             </table>
 
             <!-- 第二區塊：海外旅行不便保險 -->
-            <h3 style="margin-top: 2.5rem; color: var(--primary-dark); font-size: 1.6rem; border-bottom: 2px solid var(--primary-color); padding-bottom: 0.4rem;">二、享樂個人海外旅行不便保險</h3>
+            <h3 style="margin-top: 2.5rem; color: var(--primary-dark); font-size: 1.6rem; border-bottom: 2px solid var(--primary-color); padding-bottom: 0.4rem;">二、海外旅行不便保險</h3>
             <table class="insurance-table">
                 <thead>
                     <tr>
@@ -1228,37 +1229,37 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>TA45 享樂個人海外旅行不便保險：旅程取消保險（實支實付）</td>
+                        <td>TA45 旅程取消保險（實支實付）</td>
                         <td>保期內最高</td>
                         <td>60,000 元</td>
                         <td>—</td>
                     </tr>
                     <tr>
-                        <td>TA46 享樂個人海外旅行不便保險：班機延誤保險（定額給付-累進式）</td>
+                        <td>TA46 班機延誤保險（定額給付-累進式）</td>
                         <td>定額給付／每滿四小時／2倍型／每次最高給付金額</td>
                         <td>5,000 元 <br>(最高 10,000 元)</td>
                         <td>—</td>
                     </tr>
                     <tr>
-                        <td>TA47 享樂個人海外旅行不便保險：旅程更改保險（實支實付）</td>
+                        <td>TA47 旅程更改保險（實支實付）</td>
                         <td>保期內最高</td>
                         <td>60,000 元</td>
                         <td>—</td>
                     </tr>
                     <tr>
-                        <td>TA48 享樂個人海外旅行不便保險：行李延誤保險（定額給付）</td>
+                        <td>TA48 行李延誤保險（定額給付）</td>
                         <td>定額給付</td>
                         <td>6,000 元</td>
                         <td>—</td>
                     </tr>
                     <tr>
-                        <td>TA49 享樂個人海外旅行不便保險：行李損失保險（定額給付）</td>
+                        <td>TA49 行李損失保險（定額給付）</td>
                         <td>定額給付</td>
                         <td>6,000 元</td>
                         <td>—</td>
                     </tr>
                     <tr>
-                        <td>TA50 享樂個人海外旅行不便保險：旅行文件損失保險（定額給付）</td>
+                        <td>TA50 旅行文件損失保險（定額給付）</td>
                         <td>定額給付</td>
                         <td>3,000 元</td>
                         <td>—</td>
