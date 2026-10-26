@@ -53,7 +53,7 @@
             padding-bottom: 60px;
         }
 
-        /* 清單動態字體切換類別 */
+        /* 清單動態字體切換類別：僅調整物品名稱與主標題 */
         body.font-small {
             --font-base: 0.95rem;
             --font-title: 1.15rem;
@@ -304,6 +304,7 @@
             cursor: pointer;
             font-weight: 800;
             color: var(--muted);
+            font-size: 0.9rem !important; /* 固定切換按鈕大小 */
         }
 
         .font-btn.active {
@@ -404,7 +405,7 @@
             color: white;
             border: none;
             padding: 12px 28px;
-            font-size: 1.1rem;
+            font-size: 1.1rem !important;
             font-weight: 800;
             border-radius: 99px;
             cursor: pointer;
@@ -437,7 +438,7 @@
             gap: 12px;
             margin-bottom: 10px;
             font-weight: 800;
-            font-size: var(--font-base);
+            font-size: 1.15rem !important; /* 固定為中字型大小 */
         }
 
         #progressText { color: #e66f9a; }
@@ -460,12 +461,13 @@
 
         .toggle-hint {
             text-align: right;
-            font-size: 0.8rem;
+            font-size: 0.8rem !important;
             color: #a78bfa;
             margin-top: 6px;
             font-weight: 700;
         }
 
+        /* 📊 各大項準備進度卡片：固定為「中」字型大小 */
         .category-progress-card {
             padding: 16px 20px;
             margin-bottom: 18px;
@@ -477,7 +479,7 @@
         }
 
         .cat-progress-title {
-            font-size: var(--font-base);
+            font-size: 1.15rem !important; /* 固定大小 */
             font-weight: 800;
             margin: 0 0 12px;
             color: #7a63b8;
@@ -507,7 +509,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: calc(var(--font-base) * 0.85);
+            font-size: 1rem !important; /* 固定小卡字型大小 */
             font-weight: 700;
             margin-bottom: 6px;
         }
@@ -540,19 +542,6 @@
             transition: width .25s ease;
         }
 
-        .checklist-wrapper button {
-            border: 0;
-            border-radius: 14px;
-            padding: 6px 12px;
-            font-weight: 800;
-            cursor: pointer;
-            font-size: var(--font-base);
-            transition: transform .15s ease, filter .15s ease;
-        }
-
-        .checklist-wrapper button:hover { filter: brightness(.98); transform: translateY(-1px); }
-        .checklist-wrapper button:active { transform: translateY(0); }
-
         .checklist-list-container {
             display: grid;
             gap: 18px;
@@ -581,8 +570,9 @@
             gap: 8px;
         }
 
+        /* 標籤數量統計：固定為中字型大小 */
         .category-header .cat-count {
-            font-size: 0.85rem;
+            font-size: 0.85rem !important;
             font-weight: 800;
             padding: 4px 10px;
             border-radius: 99px;
@@ -597,22 +587,30 @@
             gap: 8px;
         }
 
+        /* ☑ 全選 / ☐ 取消全選 按鈕：固定為「中」字型大小 */
         .toggle-cat-btn {
             background: rgba(255,255,255,.9);
             color: inherit;
             border: 1.5px solid currentColor;
             padding: 5px 10px;
-            font-size: 0.85rem;
+            font-size: 0.85rem !important;
+            font-weight: 800;
             border-radius: 12px;
+            cursor: pointer;
+            transition: transform .15s ease, filter .15s ease;
         }
 
+        /* ＋ 新增 按鈕：固定為「中」字型大小 */
         .add-cat-btn {
             background: rgba(255,255,255,.85);
             color: inherit;
             border: 1.5px solid currentColor;
             padding: 5px 10px;
-            font-size: 0.85rem;
+            font-size: 0.85rem !important;
+            font-weight: 800;
             border-radius: 12px;
+            cursor: pointer;
+            transition: transform .15s ease, filter .15s ease;
         }
 
         .cat-0 .category-header { background: #ffe4ee; color: #a64e76; }
@@ -641,6 +639,7 @@
             cursor: pointer;
         }
 
+        /* 物品名稱：跟隨字體大小（小/中/大）變化 */
         .item-name {
             font-size: var(--font-base);
             line-height: 1.5;
@@ -654,12 +653,22 @@
             text-decoration-thickness: 2px;
         }
 
+        /* 刪除 按鈕：固定為「中」字型大小 */
         .delete-btn {
             padding: 6px 10px;
             border-radius: 10px;
             color: #bf6281;
             background: #fff0f5;
-            font-size: 0.85rem;
+            font-size: 0.85rem !important;
+            font-weight: 800;
+            border: none;
+            cursor: pointer;
+            transition: transform .15s ease, filter .15s ease;
+        }
+
+        .delete-btn:hover, .toggle-cat-btn:hover, .add-cat-btn:hover {
+            filter: brightness(.98);
+            transform: translateY(-1px);
         }
 
         .footer-note {
@@ -753,13 +762,13 @@
                     <div class="toggle-hint" id="toggleHint">▼ 點擊查看各大項詳細進度</div>
                 </section>
 
-                <!-- 各大項準備進度卡片（點擊可滑動跳轉） -->
+                <!-- 各大項準備進度卡片（固定為「中」字型大小） -->
                 <section class="category-progress-card" id="catProgressCard" aria-label="各大項準備進度">
                     <div class="cat-progress-title">📊 各大項準備進度（點擊可快速跳轉）</div>
                     <div class="cat-progress-grid" id="catProgressGrid"></div>
                 </section>
 
-                <!-- 清單渲染容器，避免與 tab-content ID 衝突 -->
+                <!-- 清單渲染容器 -->
                 <div id="checklistContainer" class="checklist-list-container" aria-live="polite"></div>
 
                 <p class="footer-note">
